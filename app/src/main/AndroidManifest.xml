@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.project1">
+    <!-- Always needed for AR. -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- This tag indicates that this application requires ARCore. This results in the application
+        only being visible in the Google Play Store on devices that support ARCore. -->
+    <uses-feature android:name="android.hardware.camera.ar" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/smallplanet_header_gradient"
+        android:label="@string/app_name"
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="ExtraText,GoogleAppIndexingWarning"
+        android:usesCleartextTraffic="false">
+
+        <!-- This tag indicates that this application requires ARCore. This results in the
+                    application only being visible in the Google Play Store on devices that support
+                    ARCore. -->
+        <meta-data android:name="com.google.ar.core" android:value="required" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".ContactUs" />
+        <activity android:name=".Directions" />
+        <activity android:name=".ShowTimings" />
+        <activity android:name=".directions_toll_nuclear" />
+        <activity android:name=".directions_toll_periyar" />
+        <activity android:name=".directions_toll_planetarium" />
+        <activity android:name=".directions_toll_drdo" />
+        <activity android:name=".Maps" />
+        <activity android:name=".Maps_Tnstc_Layout" />
+        <activity android:name=".Maps_Tnstc_Ground" />
+        <activity android:name=".Maps_Tnstc_First" />
+    </application>
+
+</manifest>
